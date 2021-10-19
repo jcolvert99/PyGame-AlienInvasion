@@ -1,0 +1,4 @@
+refactor- simplifies structure of code you've already written, making
+it easire to build on
+
+in pygame, origin (0,0) is at the top left of the screen
