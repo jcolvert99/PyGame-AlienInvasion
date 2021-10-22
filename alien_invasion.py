@@ -44,6 +44,7 @@ class AlienInvasion:
         #make the play button
         self.play_button = Button(self, "Play")  #creates an instance of button but doesn't draw it to the screen
 
+
     def run_game(self):
         '''Start the main loop for the game'''
         while True:
@@ -53,6 +54,7 @@ class AlienInvasion:
                 self._update_bullets()
                 self._update_aliens()
             self._update_screen()  
+
 
     def _check_events(self):
         '''Respond to mouse events (called actions)'''
@@ -67,6 +69,7 @@ class AlienInvasion:
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 mouse_pos = pygame.mouse.get_pos()
                 self._check_play_button(mouse_pos)  #send the mouse coordinates to the check_play method (only want to click on button)
+
 
     def _check_play_button(self, mouse_pos):
         '''Start a new game when the player clicks Play'''
