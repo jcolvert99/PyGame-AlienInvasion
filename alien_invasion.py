@@ -141,7 +141,9 @@ class AlienInvasion:
     def _check_bullet_alien_collisions(self):
         '''Remove bullets and alients that have collied'''
         collisions = pygame.sprite.groupcollide(self.bullets, self.aliens, True, True)
-        #^^^groupcollide compares the rects of multiple elements - creates a dictionary- key is bullet, value is alien hit
+        #^^^sprite.groupcollide function compares the rects of multiple elements and returns a dictionary- key is bullet, 
+        # corresponding value is the alien hit. when the rects of a bullet and alien overlap, the two True arguments tell pygame
+        # to delete the bullets and the aliens
 
         if collisions:
             for aliens in collisions.values():
