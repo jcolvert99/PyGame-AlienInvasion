@@ -61,7 +61,7 @@ class AlienInvasion:
         '''Each keypress is picked up by the pygame.event.get() method'''
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                sys.exit
+                sys.exit()
             elif event.type == pygame.KEYDOWN:
                 self._check_keydown_events(event)
             elif event.type == pygame.KEYUP:
